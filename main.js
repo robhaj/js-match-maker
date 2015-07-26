@@ -3,18 +3,22 @@ var numStudents, usrArray;
   numStudents = prompt("What is the total number of students learning javascript?", "Example: 25");
   usrArray = [];
 
-  for (i=numStudents; i > 0; i--) {
+      for (i=numStudents; i > 0; i--) {
+
       var usrName = prompt("What is your name?");
-      var usrPhone = prompt("What is your phone number?");
+
       var usrCity = prompt("What city do you live in?");
+
+      var usrPhone = prompt("What is your phone number?", "Example : 847-346-4660");
+
       var studentObj = {
         "name" : usrName,
         "city" : usrCity,
         "phone" : usrPhone,
-      };
+      }
       usrArray.push(studentObj);
     };
-
+    
 var numMentors, mentorArray;
 
   numMentors = prompt("What is the total number of mentors teaching javascript?", "Example: 25");
@@ -30,8 +34,7 @@ var numMentors, mentorArray;
         "phone" : mentorPhone,
       };
       mentorArray.push(mentorObj);
-    };
-
+};
     alert("There are " + numStudents + " students learning javascript.");
     alert("There are " + numMentors + " mentors teaching javascript.");
 
